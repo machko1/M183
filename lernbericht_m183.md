@@ -1,39 +1,31 @@
-# Lern-Bericht M183
+# Lern-Bericht
+✍️ ggf. Ihr Gruppenname und Ihre Gruppenmitglieder
+
 ## Einleitung
 
-In diesem Modul geht es um die Arbeit mit JSF, xhtml und css um Webapplikationen zu erstellen.
+✍️ Ein Satz, worum es in dem Projekt ging. Muss für einen externen Leser einfach zu verstehen sein.
 
 ## Was habe ich gelernt?
 
-Ich habe gelernt wie man die ID einer Sitzung ausgeben kann als String.
+✍️ Beschreiben Sie in einem Satz **eine** Sache, die Sie bei diesem Projekt gelernt haben und die Sie in diesem Lern-Bericht dokumentieren.
 
 ## Beschreibung
 
-Um die Session ID als String auszugeben, muss man in Java eine getSessionID() Klasse erstellen, welche mit den Befehlen:
-FacesContext fCtx = FacesContext.getCurrentInstance(); und
-HttpSession session = (HttpSession) fCtx.getExternalContext().getSession(false);, die aktuelle SessionID herausfindet.
-Danach gibt man die ID zurück mithilfe von: return session.getID(); , und schliesslich kann man im ".xhtml" File diese ID in einem Text mit #{*JavaKlassen-Name*.sessionId}.
+✍️ Verwenden Sie drei verschiedene Medien, um zu zeigen, was Sie gelernt haben. Zum Beispiel:
 
-![image](https://user-images.githubusercontent.com/47601770/187220491-08fd586e-c2be-4142-9ac7-2c968960b81d.png)
-
-Code Snippet:
-```
-public String getSessionId() {
-        FacesContext fCtx = FacesContext.getCurrentInstance();
-        HttpSession session = (HttpSession) fCtx.getExternalContext().getSession(false);
-        return session.getId();
-    }
-```
+* Eine textliche Beschreibung
+* Ein deutliches, aussagekräftiges Bild oder eine kommentierte Bildschirm-Aufnahme
+* Ein gut dokumentierter Code-Fetzen
+* Ein Link zu einem *selbst aufgenommenen* youtube-Video oder `.gif`.
 
 ## Verifikation
 
-Im Screenshot sehen wir die beiden Teile des Codes und zu unterst auch die Ausgabe der SessionID.
-Die Java Klasse ist auch als Snippet vorhanden.
+✍️ Erklären Sie kurz und bündig, inwiefern die von Ihnen verwendeten Medien zeigen, was Sie gelernt haben.
 
 # Reflektion zum Arbeitsprozess
 
-Ich finde es ist schlau gehandelt und es war einer der ersten Male, wo ich erfolgreich Java mit HTML kombinieren konnte.
+👍 Überlegen Sie sich jeweils etwas, was gut an Ihrer Arbeit lief; 
 
-Ich habe leider spät bemerkt, dass die Abgabe nicht spät am Abend ist sondern Mittagszeit, wegen der Teamsnachricht, weshalb ich leider das Portfolio verspätet abgebe.
+👎 und etwas, was nicht gut lief.
 
-**Für nächstes Mal muss ich mehr auf die vorgegebenen Zeiten achten** 
+**VBV**: ✍️ Formulieren Sie davon ausgehend einen *handelbaren* Verbesserungsvorschlag.
