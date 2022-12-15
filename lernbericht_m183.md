@@ -2,7 +2,7 @@
 *Edward Stevkov*
 ## Einleitung
 
-In diesem Modul haben wir die Applikationssicherheit angeschaut und die verschiedenen Lücken, welche Hackers bei einer Website/Applikation ausnutzen können. In dem Auftrag sehen was eine XSS Injection ist und wie man sie vorbeugen könnte.
+In diesem Modul haben wir die Applikationssicherheit angeschaut und die verschiedenen Lücken, welche Hackers bei einer Website/Applikation ausnutzen können. In dem Auftrag sehen wir was eine XSS Injection ist und wie man sie vorbeugen könnte.
 
 ## Was habe ich gelernt?
 
