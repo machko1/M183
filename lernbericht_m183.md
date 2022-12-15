@@ -1,18 +1,17 @@
 # Lern-Bericht M183
 ## Einleitung
 
-In diesem Modul haben wir die Applikationssicherheit angeschaut und die verschiedenen Lücken, welche Hackers bei einer Website/Applikation ausnutzen können. In dem Auftrag sehen was eine XSS Injection ist und wie man sie vorbeugt.
+In diesem Modul haben wir die Applikationssicherheit angeschaut und die verschiedenen Lücken, welche Hackers bei einer Website/Applikation ausnutzen können. In dem Auftrag sehen was eine XSS Injection ist und wie man sie vorbeugen könnte.
 
 ## Was habe ich gelernt?
 
-Ich habe gelernt wie man eine XSS Injection tätigt und wie man diese im Code vorbeugen kann. 
+Ich habe gelernt wie man eine XSS Injection tätigt.
 
 ## Beschreibung
 
-Unter XSS meint man den Begriff "Cross Side Scripting". Dies ist das einschleusen von Scripts die Dinge ausführen auf Websites, welche ein Hacker ausnutzen kann. Um dies zu umgehen, verwendet man Escaping, was Sonderzeichen wie "<" oder "&" nicht direkt als Tags liest und so keine Befehle mehr ausgeführt werden. Man unterscheidet zwischen reflektiertes- (direkter Angriff auf Seite), und persistentes XSS (Script wird auf Seite gespeichert und anderen Benutzern angezeigt). In JSF wird immer "escaped" indem man am Ende einer Line Code: (escape="true") angibt.
+Unter XSS meint man den Begriff "Cross Side Scripting". Dies ist das einschleusen von Scripts die Dinge ausführen auf Websites, welche ein Hacker ausnutzen kann. Um dies zu umgehen, verwendet man Escaping, was Sonderzeichen wie "<" oder "&" nicht direkt als Tags liest und so keine Befehle mehr ausgeführt werden. Man unterscheidet zwischen reflektiertes- (direkter Angriff auf Seite), und persistentes XSS (Script wird auf Seite gespeichert und anderen Benutzern angezeigt). *In JSF wird immer "escaped" indem man am Ende einer Line Code: (escape="true") angibt.
 
-![Demo183](https://user-images.githubusercontent.com/47601770/207857988-ee89de02-449c-4bf4-978b-774484c0f4fb.gif)
-
+![d1d](https://user-images.githubusercontent.com/47601770/207862335-fac5876f-1dd8-45e1-8014-b62cc589ead6.gif)
 
 Code Snippet:
 ```
@@ -20,7 +19,7 @@ Code Snippet:
         <h:outputText value="#{newsitem.detail}" escape="false"/>
    </div> 
 ```
-escape:"true" würde diesen Fehler beheben!
+*escape:"true" würde diesen Fehler beheben!
 
 ## Verifikation
 
