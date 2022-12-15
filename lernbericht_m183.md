@@ -1,39 +1,36 @@
-# Lern-Bericht M133
+# Lern-Bericht M183
 ## Einleitung
 
-In diesem Modul geht es um die Arbeit mit JSF, xhtml und css um Webapplikationen zu erstellen.
+In diesem Modul haben wir die Applikationssicherheit angeschaut und die verschiedenen Lücken, welche Hackers bei einer Website/Applikation ausnutzen können. In dem Auftrag sehen was eine XSS Injection ist und wie man sie vorbeugt.
 
 ## Was habe ich gelernt?
 
-Ich habe gelernt wie man die ID einer Sitzung ausgeben kann als String.
+Ich habe gelernt wie man eine XSS Injection tätigt und wie man diese im Code vorbeugen kann. 
 
 ## Beschreibung
 
-Um die Session ID als String auszugeben, muss man in Java eine getSessionID() Klasse erstellen, welche mit den Befehlen:
-FacesContext fCtx = FacesContext.getCurrentInstance(); und
-HttpSession session = (HttpSession) fCtx.getExternalContext().getSession(false);, die aktuelle SessionID herausfindet.
-Danach gibt man die ID zurück mithilfe von: return session.getID(); , und schliesslich kann man im ".xhtml" File diese ID in einem Text mit #{*JavaKlassen-Name*.sessionId}.
+Unter XSS meint man den Begriff "Cross Side Scripting". Dies ist das einschleusen von Scripts die Dinge ausführen auf Websites, welche ein Hacker ausnutzen kann. Um dies zu umgehen, verwendet man Escaping, was Sonderzeichen wie "<" oder "&" nicht direkt als Tags liest und so keine Befehle mehr ausgeführt werden. Man unterscheidet zwischen reflektiertes- (direkter Angriff auf Seite), und persistentes XSS (Script wird auf Seite gespeichert und anderen Benutzern angezeigt). In JSF wird immer "escaped" indem man am Ende einer Line Code: (escape="true") angibt.
 
-![image](https://user-images.githubusercontent.com/47601770/187220491-08fd586e-c2be-4142-9ac7-2c968960b81d.png)
+![Demo183](https://user-images.githubusercontent.com/47601770/207857988-ee89de02-449c-4bf4-978b-774484c0f4fb.gif)
+
 
 Code Snippet:
 ```
-public String getSessionId() {
-        FacesContext fCtx = FacesContext.getCurrentInstance();
-        HttpSession session = (HttpSession) fCtx.getExternalContext().getSession(false);
-        return session.getId();
-    }
+   <div class="panel-body">
+        <h:outputText value="#{newsitem.detail}" escape="false"/>
+   </div> 
 ```
+escape:"true" würde diesen Fehler beheben!
 
 ## Verifikation
 
-Im Screenshot sehen wir die beiden Teile des Codes und zu unterst auch die Ausgabe der SessionID.
-Die Java Klasse ist auch als Snippet vorhanden.
+Im GIF wird gezeigt wie ein einfacher alert mit <script> Tags ausgeführt wird und der Pop-Up auf der Site angezeigt wird. Der Code Snippet zeigt auch wo im Code das escaping ausgeschaltet ist und wo man es ändern könnte.
 
 # Reflektion zum Arbeitsprozess
 
-Ich finde es ist schlau gehandelt und es war einer der ersten Male, wo ich erfolgreich Java mit HTML kombinieren konnte.
+👍 Ich habe relativ schnell das Prinzip von Cross Side Scripting verstanden und anwenden können.
 
-Ich habe leider spät bemerkt, dass die Abgabe nicht spät am Abend ist sondern Mittagszeit, wegen der Teamsnachricht, weshalb ich leider das Portfolio verspätet abgebe.
+👎 Ich habe das Word Dokument nicht ganz durchgearbeitet und habe nur die interessanten "praktischen" Aufgaben durchgearbeitet.
 
-**Für nächstes Mal muss ich mehr auf die vorgegebenen Zeiten achten** 
+
+**Für das nächste Mal nehme ich mir vor, alle Word Dokumente von Aufgabe zu Aufgabe durchzuarbeiten, ausser es wird uns anders mitgeteilt! ** 
